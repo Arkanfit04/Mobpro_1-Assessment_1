@@ -17,4 +17,8 @@
     Saya lahir pada tanggal %1$d-%2$d-%3$d dan termasuk dalam %4$s.
 </string>
     <string name="gambar">Muhammad Arkan</string>
+    <string name="list_kosong">Belum ada data</string>
+    <string name="x_diklik">%1$s diklik!</string>
+    <string name="tambah_catatan">Tambah catatan</string>
+    <string name="belum_bisa">Belum bisa tambah catatan.</string>
 </resources>
