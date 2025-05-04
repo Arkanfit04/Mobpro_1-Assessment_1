@@ -4,7 +4,6 @@
     <string name="copyright">Gen Count adalah aplikasi untuk mengetahui generasi pengguna melalui
     perhitungan tanggal, bulan dan tahun. \n\nAplikasi ini adalah project Assessment dari Mata Kuliah Mobpro 1
     yang dikembangkan oleh Muhammad Arkan. \n\nCopyright © 2024–2025.\nAll rights reserved.</string>
-    <string name="kembali">Kembali</string>
     <string name="gencount_intro">Ketahuilah Generasimu!</string>
     <string name="nama">Nama</string>
     <string name="tanggal">Tanggal</string>
@@ -20,5 +19,14 @@
     <string name="list_kosong">Belum ada data</string>
     <string name="x_diklik">%1$s diklik!</string>
     <string name="tambah_catatan">Tambah catatan</string>
-    <string name="belum_bisa">Belum bisa tambah catatan.</string>
+    <string name="task">Task</string>
+    <string name="isi_detail">Isi detail</string>
+    <string name="deadline">Tentukan Deadline</string>
+    <string name="status">Status</string>
+    <string name="kembali">Kembali</string>
+    <string name="simpan">Simpan</string>
+    <string name="edit_catatan">Ubah catatan</string>
+    <string name="invalid">Task dan isi detail tidak boleh kosong</string>
+    <string name="lainnya">Opsi lainnya</string>
+    <string name="hapus">Hapus catatan</string>
 </resources>
