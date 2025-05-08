@@ -63,6 +63,8 @@ fun DetailScreen(navController: NavHostController, id: Long? = null) {
 
     val liststatus = listOf("Belum Selesai", "Selesai")
 
+    var showDialog by remember { mutableStateOf(false) }
+
 
     LaunchedEffect(true) {
             if (id == null) return@LaunchedEffect
@@ -116,8 +118,7 @@ fun DetailScreen(navController: NavHostController, id: Long? = null) {
                     }
                     if (id != null) {
                         DeteleAction {
-                            viewModel.delete(id)
-                            navController.popBackStack()
+                            showDialog = true
                         }
                     }
                 }
@@ -174,7 +175,17 @@ fun DetailScreen(navController: NavHostController, id: Long? = null) {
                 )
                 Text(
                     text = status,
-                    modifier = Modifier.clickable { selectedstatus = status })
+                    modifier = Modifier.clickable { selectedstatus = status }
+                )
+
+                if (id != null && showDialog) {
+                    DisplayAlertDialog(
+                        onDismissRequest = { showDialog = false}) {
+                        showDialog = false
+                        viewModel.delete(id)
+                        navController.popBackStack()
+                    }
+                }
                 }
             }
         }
