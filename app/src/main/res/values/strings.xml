@@ -35,4 +35,5 @@
     <string name="list">Tampilan list</string>
     <string name="grid">Tampilan grid</string>
     <string name="switch_theme">Ganti Tema</string>
+    <string name="recylce_bin">Recycle Bin</string>
 </resources>
