@@ -100,15 +100,6 @@ fun MainScreen(navController: NavHostController) {
                             tint = MaterialTheme.colorScheme.primary
                         )
                     }
-                    IconButton(onClick = {
-                        navController.navigate(Screen.RecycleBin.route)
-                    }) {
-                        Icon(
-                            painter = painterResource(R.drawable.baseline_delete_24), // atau icon lain sesuai kebutuhan
-                            contentDescription = "Recycle Bin",
-                            tint = MaterialTheme.colorScheme.primary
-                        )
-                    }
                 }
             )
         },
