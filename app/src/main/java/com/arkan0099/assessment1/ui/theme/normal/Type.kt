@@ -1,4 +1,4 @@
-package com.arkan0099.assessment1.ui.theme
+package com.arkan0099.assessment1.ui.theme.normal
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

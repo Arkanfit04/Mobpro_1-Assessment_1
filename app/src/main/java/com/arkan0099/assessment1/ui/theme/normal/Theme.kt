@@ -1,6 +1,5 @@
-package com.arkan0099.assessment1.ui.theme
+package com.arkan0099.assessment1.ui.theme.normal
 
-import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme

@@ -31,7 +31,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.arkan0099.assessment1.R
 import com.arkan0099.assessment1.model.Profil
-import com.arkan0099.assessment1.ui.theme.AssessmentTheme
+import com.arkan0099.assessment1.ui.theme.normal.AssessmentTheme
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

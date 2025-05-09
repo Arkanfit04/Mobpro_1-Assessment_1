@@ -47,7 +47,7 @@ import androidx.navigation.compose.rememberNavController
 import com.arkan0099.assessment1.R
 import com.arkan0099.assessment1.model.Catatan
 import com.arkan0099.assessment1.navigation.Screen
-import com.arkan0099.assessment1.ui.theme.AssessmentTheme
+import com.arkan0099.assessment1.ui.theme.normal.AssessmentTheme
 import com.arkan0099.assessment1.util.SettingsDataStore
 import com.arkan0099.assessment1.util.ViewModelFactory
 import kotlinx.coroutines.CoroutineScope
