@@ -213,7 +213,7 @@ fun ScreenContent(modifier: Modifier = Modifier) {
                 },
                 modifier = Modifier.padding(top = 8.dp)
             ) {
-                Text("Bagikan")
+                Text(stringResource(id = R.string.label_bagikan))
             }
         }
     }

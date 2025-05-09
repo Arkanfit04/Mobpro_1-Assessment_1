@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Assessment</string>
+    <string name="tentang_aplikasi">About Aplication</string>
+    <string name="tanggal">Date</string>
+    <string name="bulan">Mounth</string>
+    <string name="tahun">Year</string>
+    <string name="hitung">Count</string>
+    <string name="copyright">Gen Count is an application to find out the user\'s generation through the calculation of the date, month and year. \\n\\nThis application is an Assessment project from the Mobpro 1 Course developed by Muhammad Arkan. \\n\\nCopyright © 2024–2025.\\nAll rights reserved.</string>
+    <string name="kembali">Back</string>
+    <string name="gencount_intro">Know Your Generation!</string>
+    <string name="nama">Name</string>
+    <string name="input_invalid">Cannot Be Empty</string>
+    <string name="input_invalid_value">Invalid Value</string>
+    <string name="bagikan_template">I was born on %1$d-%2$d-%3$d and belong to %4$s.</string>
+    <string name="gambar">Picture</string>
+    <string name="label_bagikan">Share</string>
+</resources>
