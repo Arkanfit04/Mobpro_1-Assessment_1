@@ -26,7 +26,7 @@
     <string name="kembali">Kembali</string>
     <string name="simpan">Simpan</string>
     <string name="edit_catatan">Ubah catatan</string>
-    <string name="invalid">Task dan isi detail tidak boleh kosong</string>
+    <string name="invalid">Tidak boleh ada data yang tidak valid atau kosong</string>
     <string name="lainnya">Opsi lainnya</string>
     <string name="hapus">Hapus catatan</string>
     <string name="pesan_hapus">Hapus catatan ini?</string>

@@ -24,7 +24,6 @@ import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextField
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
@@ -58,7 +57,7 @@ fun DetailScreen(navController: NavHostController, id: Long? = null) {
 
     var task by rememberSaveable { mutableStateOf("") }
     var detail by rememberSaveable { mutableStateOf("") }
-    var deadline by rememberSaveable { mutableStateOf("/") }
+    var deadline by rememberSaveable { mutableStateOf("") }
     var selectedstatus by rememberSaveable { mutableStateOf("Belum Selesai") }
 
     val liststatus = listOf("Belum Selesai", "Selesai")
@@ -154,13 +153,14 @@ fun DetailScreen(navController: NavHostController, id: Long? = null) {
                 modifier = Modifier.fillMaxHeight(0.3f)
             )
 
-            TextField(
+            OutlinedTextField(
                 value = deadline,
-                onValueChange = {
-                    deadline = formatDateInput(it)
-                },
+                onValueChange = { deadline = it },
                 label = { Text("Deadline (dd/MM/yyyy)") },
-                keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number)
+                placeholder = { Text("Contoh: 12/05/2025") },
+                singleLine = true,
+                keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Text),
+                modifier = Modifier.fillMaxWidth()
             )
 
             Text(text = "Status Task", style = MaterialTheme.typography.titleMedium)
@@ -191,50 +191,6 @@ fun DetailScreen(navController: NavHostController, id: Long? = null) {
         }
     }
 }
-
-fun formatDateInput(input: String): String {
-    val digits = input.filter { it.isDigit() }
-    val minYear = 2025
-    val maxYear = 2100
-
-    var day = ""
-    var month = ""
-    var year: String
-
-    if (digits.isNotEmpty()) {
-        day = digits.take(2)
-        if (day.length == 2) {
-            val dayInt = day.toInt().coerceAtMost(31)
-            day = dayInt.toString().padStart(2, '0')
-        }
-    }
-
-    if (digits.length >= 3) {
-        month = digits.substring(2).take(2)
-        if (month.length == 2) {
-            val monthInt = month.toInt().coerceAtMost(12)
-            month = monthInt.toString().padStart(2, '0')
-        }
-    }
-
-    if (digits.length > 4) {
-        year = digits.substring(4).take(4)
-        if (year.length == 4) {
-            val yearInt = year.toInt().coerceIn(minYear, maxYear)
-            year = yearInt.toString()
-        }
-    } else {
-        // Auto default ke 2025
-        year = minYear.toString()
-    }
-
-    return buildString {
-        if (day.isNotEmpty()) append(day)
-        if (month.isNotEmpty()) append("/$month")
-        if (year.isNotEmpty()) append("/$year")
-    }
-}
-
 
 @Composable
 fun DeteleAction(delete: () -> Unit) {
