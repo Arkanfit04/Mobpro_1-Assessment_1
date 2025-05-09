@@ -80,8 +80,8 @@ fun AboutScreen(profil: Profil, navController: NavHostController) {
                 painter = painterResource(id = profil.imageResId),
                 contentDescription = stringResource(R.string.gambar),
                 modifier = Modifier
-                    .fillMaxWidth(0.7f) // Atur lebar gambar sesuai keinginan
-                    .aspectRatio(1f)     // Agar tetap proporsional
+                    .fillMaxWidth(0.7f)
+                    .aspectRatio(1f)
             )
         }
     }
