@@ -24,14 +24,4 @@ interface CatatanDao {
 
     @Query("DELETE FROM catatan WHERE id = :id")
     suspend fun deleteById(id: Long)
-
-    @Query("SELECT * FROM catatan WHERE isDeleted = 1")
-    fun getDeletedCatatan(): Flow<List<Catatan>>
-
-    @Query("UPDATE catatan SET isDeleted = 0 WHERE id = :id")
-    suspend fun restoreById(id: Long)
-
-    @Query("DELETE FROM catatan WHERE id = :id")
-    suspend fun deletePermanently(id: Long)
-
 }

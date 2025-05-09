@@ -11,5 +11,4 @@ data class Catatan(
     val detail: String,
     val deadline: String,
     val status: String,
-    val isDeleted: Boolean = false
 )
