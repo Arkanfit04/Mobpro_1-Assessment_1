@@ -60,6 +60,7 @@ import kotlinx.coroutines.launch
 fun MainScreen(navController: NavHostController) {
     val dataStore = SettingsDataStore(LocalContext.current)
     val showList by dataStore.layoutFlow.collectAsState(true)
+    val isGreenTheme = dataStore.themeFlow.collectAsState(initial = false).value
 
     Scaffold(
         topBar = {
@@ -74,6 +75,17 @@ fun MainScreen(navController: NavHostController) {
                 actions = {
                     IconButton(onClick = {
                         CoroutineScope(Dispatchers.IO).launch {
+                            dataStore.setTheme(!isGreenTheme)
+                        }
+                    }) {
+                        Icon(
+                            painter = painterResource(id = R.drawable.baseline_format_paint_24),
+                            contentDescription = stringResource(id = R.string.switch_theme),
+                            tint = MaterialTheme.colorScheme.primary
+                        )
+                    }
+                    IconButton(onClick = {
+                        CoroutineScope(Dispatchers.IO).launch {
                             dataStore.saveLayout(!showList)
                         }}) {
                         Icon(
@@ -85,6 +97,15 @@ fun MainScreen(navController: NavHostController) {
                                 if (showList) R.string.grid
                                 else R.string.list
                             ),
+                            tint = MaterialTheme.colorScheme.primary
+                        )
+                    }
+                    IconButton(onClick = {
+                        navController.navigate(Screen.RecycleBin.route)
+                    }) {
+                        Icon(
+                            painter = painterResource(R.drawable.baseline_delete_24), // atau icon lain sesuai kebutuhan
+                            contentDescription = "Recycle Bin",
                             tint = MaterialTheme.colorScheme.primary
                         )
                     }
